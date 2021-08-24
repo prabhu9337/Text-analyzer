@@ -27,7 +27,7 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = 'gray';
       showAlert("Dark mode has been Enabled", "success");
-      document.title = 'TextUtil - Darkmode';
+      // document.title = 'TextUtil - Darkmode';
     }
     else{
       setMode('light');
@@ -67,7 +67,7 @@ function App() {
        <div className="container my-3">
          <Switch>
            <Route path="/about">
-             <About/>
+             <About mode={mode}/>
            </Route>
            <Route path="/">
             <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>
